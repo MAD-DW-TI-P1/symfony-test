@@ -1,3 +1,5 @@
+<img src="https://jorgebenitezlopez.com/github/symfony.jpg">
+
 # Symfony y test
 
 Instalación de Symfony y creación de test
