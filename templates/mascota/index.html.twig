@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mascota index{% endblock %}
+
+{% block body %}
+    <h1>Mascota index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Edad</th>
+                <th>Created</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mascotum in mascotas %}
+            <tr>
+                <td>{{ mascotum.id }}</td>
+                <td>{{ mascotum.name }}</td>
+                <td>{{ mascotum.edad }}</td>
+                <td>{{ mascotum.created ? mascotum.created|date('H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_mascota_show', {'id': mascotum.id}) }}">show</a>
+                    <a href="{{ path('app_mascota_edit', {'id': mascotum.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_mascota_new') }}">Create new</a>
+{% endblock %}

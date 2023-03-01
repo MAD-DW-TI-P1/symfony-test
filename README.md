@@ -21,6 +21,8 @@ Instalación de Symfony y creación de test
 
 # Configuración y creación de entidades
 
+- Modificamos el .env para que genere un sqlite (https://www.sqlite.org/index.html)
+
 
 # Rutas de la aplicación:
 
