@@ -19,6 +19,7 @@ Instalación de Symfony y creación de test
 - composer require symfony/panther --dev
 - composer require --dev dbrekelmans/bdi
 
+
 # Configuración y creación de entidades
 
 - Modificamos el .env para que genere un sqlite (https://www.sqlite.org/index.html)
@@ -26,6 +27,12 @@ Instalación de Symfony y creación de test
 - php bin/console make:crud (Creamos el CRUD de la entidad mascota)
 - php bin/console doctrine:schema:update --force (Actualizamos la base de datos) 
 - php bin/console make:entity imgmascota (Con un campo mascota tipo relación OneToMany)
+
+
+# Comando para hacer y ejectuar test
+- Comando para actualizar drivers: vendor/bin/bdi detect drivers
+- Hacer: php bin/console make:test (Con la opción: PantherTestCase)
+- Ejecutar: php bin/phpunit
 
 
 # Rutas de la aplicación:
