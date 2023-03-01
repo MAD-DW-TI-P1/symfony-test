@@ -22,10 +22,19 @@ Instalación de Symfony y creación de test
 # Configuración y creación de entidades
 
 - Modificamos el .env para que genere un sqlite (https://www.sqlite.org/index.html)
+- php bin/console make:entity (Creamos mascota con nombre, edad y fecha de creación)
+- php bin/console make:crud (Creamos el CRUD de la entidad mascota)
+- php bin/console doctrine:schema:update --force (Actualizamos la base de datos) 
+- php bin/console make:entity imgmascota (Con un campo mascota tipo relación OneToMany)
 
 
 # Rutas de la aplicación:
 
 | URL path                    | Description           | 
 | :--------------------------:|:---------------------:|
-| /                           |  Home page            | 
+| /mascota                    |  Listado de mascotas  | 
+| /mascota/new                |  Nueva mascota        |
+| /mascota/1/edit             |  Editar mascota 1     |
+| /imgmascota                 |  Listado de imaágenes de mascotas  | 
+| /imgmascota/new             |  Añadir nueba imágen de mascotas        |
+| /imgmascota/1/edit          |  Editar imagen de mascota    |

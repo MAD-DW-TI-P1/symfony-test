@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Imgmascota{% endblock %}
+
+{% block body %}
+    <h1>Imgmascota</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ imgmascotum.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ imgmascotum.name }}</td>
+            </tr>
+            <tr>
+                <th>Src</th>
+                <td>{{ imgmascotum.src }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_imgmascota_index') }}">back to list</a>
+
+    <a href="{{ path('app_imgmascota_edit', {'id': imgmascotum.id}) }}">edit</a>
+
+    {{ include('imgmascota/_delete_form.html.twig') }}
+{% endblock %}

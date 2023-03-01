@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Imgmascota{% endblock %}
+
+{% block body %}
+    <h1>Edit Imgmascota</h1>
+
+    {{ include('imgmascota/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_imgmascota_index') }}">back to list</a>
+
+    {{ include('imgmascota/_delete_form.html.twig') }}
+{% endblock %}

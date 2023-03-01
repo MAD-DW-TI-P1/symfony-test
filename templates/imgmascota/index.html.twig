@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Imgmascota index{% endblock %}
+
+{% block body %}
+    <h1>Imgmascota index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Src</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for imgmascotum in imgmascotas %}
+            <tr>
+                <td>{{ imgmascotum.id }}</td>
+                <td>{{ imgmascotum.name }}</td>
+                <td>{{ imgmascotum.src }}</td>
+                <td>
+                    <a href="{{ path('app_imgmascota_show', {'id': imgmascotum.id}) }}">show</a>
+                    <a href="{{ path('app_imgmascota_edit', {'id': imgmascotum.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_imgmascota_new') }}">Create new</a>
+{% endblock %}
