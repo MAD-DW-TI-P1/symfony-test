@@ -44,8 +44,8 @@ Instalación de Symfony y creación de test
 | /mascota                    |  Listado de mascotas  | 
 | /mascota/new                |  Nueva mascota        |
 | /mascota/1/edit             |  Editar mascota 1     |
-| /imgmascota                 |  Listado de imaágenes de mascotas  | 
-| /imgmascota/new             |  Añadir nueba imágen de mascotas        |
+| /imgmascota                 |  Listado de imágenes de mascotas  | 
+| /imgmascota/new             |  Añadir nueva imágen de mascotas        |
 | /imgmascota/1/edit          |  Editar imagen de mascota    |
 
 

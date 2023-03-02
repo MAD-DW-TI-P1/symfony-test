@@ -50,6 +50,7 @@ class Mascota
         return $this;
     }
 
+
     public function getEdad(): ?int
     {
         return $this->edad;
