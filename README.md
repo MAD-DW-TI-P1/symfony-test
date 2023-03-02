@@ -47,3 +47,10 @@ Instalación de Symfony y creación de test
 | /imgmascota                 |  Listado de imaágenes de mascotas  | 
 | /imgmascota/new             |  Añadir nueba imágen de mascotas        |
 | /imgmascota/1/edit          |  Editar imagen de mascota    |
+
+
+# Referencias
+
+- PHP Unit: https://phpunit.de/
+- Documentación de Symfony: https://symfony.com/doc/5.4/testing.html
+- Info sobre Panther:  https://github.com/symfony/panther#testing-usage
