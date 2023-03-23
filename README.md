@@ -13,7 +13,7 @@ Instalación de Symfony y creación de test
 
 # Pasos para la instalación de Symfomy y paquetes
 
-- new symfony  --version=5.4
+- symfony new test  --version=5.4
 - composer require symfony/orm-pack (Sin docker)
 - composer require symfony/maker-bundle
 - composer require form validator twig-bundle security-csrf annotations
