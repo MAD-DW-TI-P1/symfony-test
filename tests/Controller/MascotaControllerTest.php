@@ -93,16 +93,15 @@ class MascotaControllerTest extends WebTestCase
 
         self::assertResponseRedirects('/mascota/');
 
-        // $fixture = $this->repository->findAll();
+        $fixture = $this->repository->findAll();
 
-        // self::assertSame('Something New', $fixture[0]->getName());
-        // self::assertSame('Something New', $fixture[0]->getEdad());
-        // self::assertSame('Something New', $fixture[0]->getCreated());
+        self::assertSame('Something New', $fixture[0]->getName());
+        self::assertSame('Something New', $fixture[0]->getEdad());
+        self::assertSame('Something New', $fixture[0]->getCreated());
     }
 
     public function testRemove(): void
     {
-
         $originalNumObjectsInRepository = count($this->repository->findAll());
 
         $fixture = new Mascota();
