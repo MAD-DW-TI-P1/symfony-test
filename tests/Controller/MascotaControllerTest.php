@@ -6,20 +6,26 @@ use App\Entity\Mascota;
 use App\Repository\MascotaRepository;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+//use Doctrine\ORM\EntityManagerInterface;
 
 class MascotaControllerTest extends WebTestCase
 {
     private KernelBrowser $client;
     private MascotaRepository $repository;
     private string $path = '/mascota/';
+    //private EntityManagerInterface $manager;
 
     protected function setUp(): void
     {
         $this->client = static::createClient();
         $this->repository = static::getContainer()->get('doctrine')->getRepository(Mascota::class);
 
+        //Inicializar la propiedad $manager antes de usarla. En el caso de que la utilice
+        // $this->manager = static::getContainer()->get('doctrine')->getManager();
+
         foreach ($this->repository->findAll() as $object) {
             $this->repository->remove($object, true);
+            //$this->manager->remove($object);
         }
     }
 

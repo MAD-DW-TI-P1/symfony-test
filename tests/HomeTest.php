@@ -8,6 +8,7 @@ class HomeTest extends PantherTestCase
 {
     public function testSomething(): void
     {
+
         // Crea el 'navegador'
         $client = static::createPantherClient();
         // Carga una ruta
